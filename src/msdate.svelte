@@ -10,7 +10,8 @@
         / 24 // convert to days 
         );
 
-    let msDateDay = beginOfEra.getDate() + dateDiffInDays;
+    // plus one, since 2022-01-01 should be equal to 2021-12-33
+    let msDateDay = beginOfEra.getDate() + dateDiffInDays + 1;
     let msDateMonth = 12;
 
     while(msDateDay > 99) { 
